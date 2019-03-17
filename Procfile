@@ -1,1 +1,2 @@
-web: gunicorn deploy:app
+web: gunicorn ivy_model:app
+
