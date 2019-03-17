@@ -1,2 +1,1 @@
-web: python ivy_model.py
-
+web: gunicorn deploy:app
