@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<form method="POST">
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stanford.css') }}">
+</head>
 
-    Unweighted GPA: <input name="unweightedGPA" type="text"><br>
-    Weighted GPA: <input name="weightedGPA" type="text"><br>
-    SAT Math Score: <input name="SATMath" type="text"><br>
-    SAT Reading Score: <input name="SATReading" type="text"><br>
-    Class Rank: <input name="classRank" type="text"><br>
-    <input type="submit">
+<body>
 
-</form>
+<nav class="navbar navbar-primary bg-primary">
+  <a class="navbar-brand" href="#">
+  <img src="{{ url_for('static',filename='img/cardinal.png') }}" width="190" height="50" alt="">
+</a>
+</nav>
+<br>
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-2">
+    <form method="POST">
+        Unweighted GPA: <input class="form-control" name="unweightedGPA" type="text"><br>
+        Weighted GPA: <input class="form-control" name="weightedGPA" type="text"><br>
+        SAT Math Score: <input class="form-control" name="SATMath" type="text"><br>
+        SAT Reading Score: <input class="form-control" name="SATReading" type="text"><br>
+        Class Rank: <input class="form-control" name="classRank" type="text"><br>
+        <input class="btn btn-primary" type="submit">
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
