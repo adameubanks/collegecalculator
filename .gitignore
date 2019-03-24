@@ -1,5 +1,5 @@
-bin
-include
-lib
-local
-share
+bin/
+include/
+lib/
+local/
+share/
