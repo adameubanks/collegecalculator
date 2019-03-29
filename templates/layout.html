@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stanford.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar navbar-primary bg-primary">
+  <a class="navbar-brand" href="#">
+  <img src="{{ url_for('static',filename='img/collegecalculatorlogo.svg') }}" width="190" height="50" alt="">
+</a>
+</nav>
+<br>
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-2">
+    <div id="content">{% block content %}{% endblock %}</div>
+  </div>
+  <div class="col-lg-5">
+  </div>
+</div>
+</body>
+
+</html>

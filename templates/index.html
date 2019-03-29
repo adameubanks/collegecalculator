@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Will I Get in?</h1>
+    <br>
+    <h2>Current Colleges Availible</h2>
+    <a href="">Stanford</a>
+    <form method="POST">
+        Unweighted GPA: <input class="form-control" name="unweightedGPA" type="text"><br>
+        Weighted GPA: <input class="form-control" name="weightedGPA" type="text"><br>
+        SAT Math Score: <input class="form-control" name="SATMath" type="text"><br>
+        SAT Reading Score: <input class="form-control" name="SATReading" type="text"><br>
+        Class Rank: <input class="form-control" name="classRank" type="text"><br>
+        <input class="btn btn-primary" type="submit">
+    </form>
+  </div>
+</div>
+{% endblock %}
