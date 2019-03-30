@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="col-lg-3">
+<div class="col-lg-4">
   {% if error != Null %}
   <div class="alert alert-danger" role="alert">
     {{error}}
@@ -13,6 +13,11 @@
       SAT Math Score: <input class="form-control" name="SATMath" type="text" placeholder="out of 800"><br>
       SAT Reading Score: <input class="form-control" name="SATReading" type="text" placeholder="out of 800"><br>
       Class Rank: <input class="form-control" name="classRank" type="text" placeholder="out of the # of people in your class"><br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">I understand that this is a dumb site made by highschoolers
+          and has no correlation or guarantee of admission/rejection</label>
+      </div><br>
       <input class="btn btn-primary" type="submit">
   </form>
 </div>

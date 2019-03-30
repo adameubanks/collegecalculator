@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
 {% for i in range(num_colleges)%}
-<h1>{{colleges_dict[colleges[i]][0]}}% likely to get into {{colleges[i]}}</h1>
-<small>{{colleges_dict[colleges[i]][1]}}% normal acceptance rate</small>
-<br>
-<br>
+  <h1>{{colleges_dict[colleges[i]][0]}}% likely to get into {{colleges[i]}}</h1>
+  <small>{{colleges_dict[colleges[i]][1]}}% normal acceptance rate</small>
+  <br><br>
 {% endfor %}
+
 <br><br>
 <h2>Has CollegeCalculator helped you? If so, consider donating <a href="https://donorbox.org/fund-our-college">here</a></h2>
 {% endblock %}
