@@ -1,2 +1,2 @@
-web: gunicorn ivy_model:app
+web: gunicorn app:app
 
