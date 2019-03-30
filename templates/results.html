@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>{{likelyhoods}}</h1>
+{% for i in range(num_colleges)%}
+<h1>{{colleges_dict[colleges[i]][0]}}% likely to get into {{colleges[i]}}</h1>
+<small>{{colleges_dict[colleges[i]][1]}}% normal acceptance rate</small>
+<br>
+<br>
+{% endfor %}
 {% endblock %}

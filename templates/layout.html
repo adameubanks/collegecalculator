@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  </style>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stanford.css') }}">
+  <title>College Calculator Beta | Test Your Chances of Getting Into Harvard, Stanford, MIT, etc.</title>
 </head>
 
 <body>
 
 <nav class="navbar navbar-primary bg-primary">
-  <a class="navbar-brand" href="#">
-  <img src="{{ url_for('static',filename='img/collegecalculatorlogo.svg') }}" width="190" height="50" alt="">
+  <a class="navbar-brand" href="/">
+  <img src="{{ url_for('static',filename='img/navbarlogo.svg') }}" width="200" height="60" alt="beta">
+  <a class="btn btn-lg btn-success" href="/chanceme">Chance Me</a>
 </a>
+
 </nav>
 <br>
 <div class="row">
   <div class="col-lg-2"></div>
-  <div class="col-lg-2">
+  <div class="col-lg-8">
     <div id="content">{% block content %}{% endblock %}</div>
+    <hr>
+    <img src="{{ url_for('static',filename='img/collegecalculatorlogo.svg') }}" width="200" height="60" alt="beta" class="center">
+    <p>Created by: Adam Eubanks and Harshal Nallapareddy</p>
   </div>
-  <div class="col-lg-5">
+  <div class="col-lg-2">
   </div>
 </div>
 </body>

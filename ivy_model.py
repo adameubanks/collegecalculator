@@ -1,10 +1,7 @@
-from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-app = Flask(__name__)
-
-def ivy_algorithm(unweightedGPA, weightedGPA, SATMath, SATReading, classRank, collegeSelected):
+def algo(unweightedGPA, weightedGPA, SATMath, SATReading, classRank, collegeSelected):
     unweight = tf.feature_column.numeric_column("UW")
     weight = tf.feature_column.numeric_column("W")
     satm = tf.feature_column.numeric_column("SATM")
@@ -51,25 +48,3 @@ def ivy_algorithm(unweightedGPA, weightedGPA, SATMath, SATReading, classRank, co
     likelyhood = round(multiplier * likelyhood[0] * 100, 2)
 
     return likelyhood
-
-@app.route('/')
-def myForm():
-    return render_template('index.html')
-
-@app.route('/', methods=['POST'])
-def myFormPost():
-    current_colleges = ['Stanford','Harvard', 'MIT', 'Princeton', 'Yale', 'Columbia']
-    unweightedGPA = request.form.get('unweightedGPA', type=float)
-    weightedGPA = request.form.get('weightedGPA', type=float)
-    SATMath = request.form.get('SATMath', type=int)
-    SATReading = request.form.get('SATReading', type=int)
-    classRank = request.form.get('classRank', type=int)
-
-    likelyhoods = []
-    for i in range(len(current_colleges)):
-        likelyhoods.append(ivy_algorithm(unweightedGPA, weightedGPA, SATMath, SATReading, classRank, current_colleges[i]))
-
-    return render_template('results.html',likelyhoods=likelyhoods)
-
-if __name__ == "__main__":
-    app.run(debug=True)
