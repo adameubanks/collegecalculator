@@ -43,7 +43,12 @@ def algo(unweightedGPA, weightedGPA, SATMath, SATReading, classRank, collegeSele
     pred_fn = tf.estimator.inputs.pandas_input_fn(x=data, num_epochs=1, shuffle=False)
 
     pred_gen = list(model.predict(input_fn=pred_fn))
-
+    if SATMath+SATReading < 1400:
+        multiplier = multiplier / 2
+    if unweightedGPA < 3.0:
+        multiplier = multiplier / 2
+    if weightedGPA < 3.5:
+        multiplier = multiplier / 2
     likelyhood = pred_gen[0]['logistic']
     likelyhood = round(multiplier * likelyhood[0] * 100, 2)
 
