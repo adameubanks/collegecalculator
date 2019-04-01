@@ -1,7 +1,4 @@
 from flask import Flask, render_template, request, flash
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import DataRequired
 import ivy_model as ivy
 app = Flask(__name__)
 

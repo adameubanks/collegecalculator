@@ -1,5 +1,10 @@
-# collegecalculator
-A flask website that uses machine learning to predict college admissions
+# CollegeCalculatorAI
 
-Harshal can you update this too and make it look nice?
-
+College Calculator AI is a flask website that uses a TensorFlow deep learning model to predict college admissions.
+Current colleges available:
+Harvard
+Stanford
+Columbia
+MIT
+Princeton
+Yale
