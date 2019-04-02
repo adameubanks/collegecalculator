@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {% block head %}
   <style>
     .center {
       display: block;
@@ -18,7 +19,6 @@
   <link rel="icon" href="{{ url_for('static',filename='img/favicon.ico') }}" type="image/x-icon">
   <title>College Calculator Beta | Test Your Chances of Getting Into Harvard, Stanford, MIT, etc.</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81868222-4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,7 +27,7 @@
 
     gtag('config', 'UA-81868222-4');
   </script>
-
+  {% endblock %}
 </head>
 
 <body>
@@ -38,6 +38,7 @@
   <a class="btn btn-lg btn-success" href="/chanceme">Chance Me</a>
 </a>
 </nav>
+{% block landing_page %}{% endblock %}
 <br>
 
 <div class="container-fluid">
@@ -61,7 +62,7 @@
       <p>Created by: Adam Eubanks and Harshal Nallapareddy</p>
       <a href="https://donorbox.org/fund-our-college" style="align:right">Help Pay for Our College</a>
     </div>
-    <div class="col-lg-1"></div>    
+    <div class="col-lg-1"></div>
   </div>
 </div>
 

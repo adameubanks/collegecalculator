@@ -1,9 +1,64 @@
 {% extends "layout.html" %}
+{% block head %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+<link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet">
+<style>
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  }
+</style>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static',filename='img/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static',filename='img/favicon.ico') }}" type="image/x-icon">
+<title>College Calculator Beta | Test Your Chances of Getting Into Harvard, Stanford, MIT, etc.</title>
 
-{% block content %}
-    <h1>Will I Get in?</h1>
-    <br>
-    <h2>Current Colleges Availible</h2>
-    <a href="">College List</a>
-    <a class="btn btn-lg btn-success" href="/chanceme">Chance Me</a>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81868222-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-81868222-4');
+</script>
+{% endblock %}
+
+{% block landing_page %}
+<section id="hero">
+  <div class="hero-container">
+    <h1>Welcome to CollegeCalculator</h1>
+    <h2>Click to see your chance of getting into an Ivy League</h2>
+    <a href="/chanceme" class="btn-get-started">Chance Me</a>
+  </div>
+</section>
+
+<main id="main">
+  <section id="about">
+    <div class="container">
+      <div class="row about-container">
+
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <h2 class="title">Few Words About Us</h2>
+          <p>We are two high schoolers from Virginia, USA who love AI and web development. We created this site so that other high schoolers
+          could see their chances of getting into a collge. Our app was built on a simple principle: "Can AI predict college admissions".
+          Our answer: Yes!x</p>
+
+        </div>
+
+        <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"><img src="{{ url_for('static', filename='img/SitePic.JPG')}}" height=450 width=600></div>
+      </div>
+
+    </div>
+  </section>
+  <section id="donate">
+    <h1 class="title"><strong><a href="https://donorbox.org/fund-our-college">Help Pay for Our College!</a></strong></h1>
+  </section>
+
+
 {% endblock %}
