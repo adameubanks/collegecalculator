@@ -10934,6 +10934,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about .about-container p {
   color: #ffffff;
   line-height: 26px;
+  font-size: 20px;
 }
 
 #about .about-container p:last-child {
