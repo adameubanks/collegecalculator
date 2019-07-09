@@ -41,30 +41,48 @@
 
 <main id="main">
   <section id="about">
+      <div class="row about-container">
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <iframe width="672" height="378" src="https://www.youtube.com/embed/1Nk_83QL1C4?controls=0" frameborder="0"
+           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
+          <h2 class="title">How It Works</h2>
+          <p>CollegeCalculator AI uses admission data from CollegeData.com. Colleges with similar selectivity are group togther and trained through
+          a deep neural network in tensorflow. Once the deep learning model is trained, a linear model is created for each college based on that
+        college's average SAT, admission rate, etc. Because of this, CollegeCalculator is able to individualize deep learning models for each college.
+        This method is not perfect, but fairly accurate given the lack of specific data on college admissions. If you would like to learn more about
+        how CollegeCalculator works, please visit the github page where you can view the full code linked
+        <a href="https://github.com/KhanradCoder/collegecalculator" target="_blank">here.</a></p>
+        </div>
+      </div>
+  </section>
+<br>
+  <section id="test">
+    <h1 style="text-align:center"><a href="donorbox.org/fund-our-college"><strong>Current Colleges Available:</strong></a></h1>
+    <img src="https://www.stickpng.com/assets/images/5842f68fa6515b1e0ad75b22.png" width=250 height=220 alt="">
+    <img src="https://arc-hum.princeton.edu/sites/arc_hum/files/styles/pwds_featured_image/public/news/princeton-logo_1.png?itok=pvl_f5v5" width=270 height=270 alt="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Yale_University_logo.svg/1280px-Yale_University_logo.svg.png" width=350 height=160 alt="">
+    <img src="https://stanford.edu/~shervine/images/stanford.png" width=300 height=250 alt="">
+    <img src="https://www.mybaggage.com/shipping/wp-content/uploads/2017/08/boston.png" width=280 height=270 alt="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1280px-MIT_logo.svg.png" width=320 height=170 alt="">
+  </section>
+<br>
+  <section id="donate">
     <div class="container">
       <div class="row about-container">
-
         <div class="col-lg-6 content order-lg-1 order-2">
-          <h2 class="title">Few Words About Us</h2>
-          <p>We are two high-schoolers from Virginia, USA, who love AI and web development. We created this site so that other high schoolers
-          could see their chances of getting into a college. Our app was built on a simple principle: "Can AI predict college admissions".
-          Our answer: Yes!</p>
-
+          <h1 class="title">A Few Words About Us</h2>
+          <h2>We are two high-schoolers from Virginia, USA who love AI and web development. We created this site so that other high schoolers
+          could see their chances of getting into certain colleges. Our app was built on a simple principle: "Can AI predict college admissions".
+          Our answer: Yes!</h2>
         </div>
-
-        <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"><img src="{{ url_for('static', filename='img/SitePic.JPG')}}" height=450 width=600></div>
+        <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"><img src="{{ url_for('static', filename='img/SitePic.JPG')}}" height=450 width=650></div>
       </div>
-
     </div>
   </section>
-  <!--<section id="'video">
-      <h2 class="title">Video</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=1Nk_83QL1C4"
-              frameborder="0" allowfullscreen></iframe>
-  </section>-->
-  <section id="donate">
-    <h1 class="title"><strong><a href="https://donorbox.org/fund-our-college">Help Pay for Our College!</a></strong></h1>
-  </section>
+
+
 
 
 {% endblock %}
